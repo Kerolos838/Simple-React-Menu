@@ -1,0 +1,45 @@
+.cat-btn{
+  padding: 3px 10px;
+  border: 2px solid #00a8ff;
+  border-radius: 8px;
+  color: #00a8ff;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 15px;
+}
+.cat-btn::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 101%;
+  border-radius: 6px;
+  background-color: #00a8ff;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.cat-btn:hover{
+  color: #fff;
+}
+.cat-btn:hover::before{
+  animation: toright 0.5s linear forwards;
+}
+.card-h{
+  transition: 0.3s;
+}
+.card-h:hover{
+  box-shadow: 0 0 10px #cc8181;
+  position: relative;
+  bottom: 3px;
+}
+@keyframes toright {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}

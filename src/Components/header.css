@@ -1,0 +1,43 @@
+.title-menu{
+  color: #355ba9;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 10px auto;
+  border-bottom: 4px solid #d50000;
+  width: fit-content;
+  padding: 0 15px;
+  font-style: italic;
+  transition: 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+.title-menu:hover{
+  border-radius: 8px;
+  color: #d50000;
+}
+
+.title-menu::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 7px;
+  background-color: #355ba9;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.title-menu:hover::before{
+  animation: toup 0.5s linear forwards;
+}
+@keyframes toup {
+  0%{
+    width: 0;
+    height: 0;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+  }
+}
